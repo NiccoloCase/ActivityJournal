@@ -129,29 +129,53 @@ activityJournal/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/activityJournal.dir/build.make CMakeFiles/activityJournal.dir/build
 .PHONY : activityJournal/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+MyApp.o: MyApp.cpp.o
+.PHONY : MyApp.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/activityJournal.dir/build.make CMakeFiles/activityJournal.dir/main.cpp.o
-.PHONY : main.cpp.o
+MyApp.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/activityJournal.dir/build.make CMakeFiles/activityJournal.dir/MyApp.cpp.o
+.PHONY : MyApp.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+MyApp.i: MyApp.cpp.i
+.PHONY : MyApp.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/activityJournal.dir/build.make CMakeFiles/activityJournal.dir/main.cpp.i
-.PHONY : main.cpp.i
+MyApp.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/activityJournal.dir/build.make CMakeFiles/activityJournal.dir/MyApp.cpp.i
+.PHONY : MyApp.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+MyApp.s: MyApp.cpp.s
+.PHONY : MyApp.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/activityJournal.dir/build.make CMakeFiles/activityJournal.dir/main.cpp.s
-.PHONY : main.cpp.s
+MyApp.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/activityJournal.dir/build.make CMakeFiles/activityJournal.dir/MyApp.cpp.s
+.PHONY : MyApp.cpp.s
+
+MyFrame.o: MyFrame.cpp.o
+.PHONY : MyFrame.o
+
+# target to build an object file
+MyFrame.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/activityJournal.dir/build.make CMakeFiles/activityJournal.dir/MyFrame.cpp.o
+.PHONY : MyFrame.cpp.o
+
+MyFrame.i: MyFrame.cpp.i
+.PHONY : MyFrame.i
+
+# target to preprocess a source file
+MyFrame.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/activityJournal.dir/build.make CMakeFiles/activityJournal.dir/MyFrame.cpp.i
+.PHONY : MyFrame.cpp.i
+
+MyFrame.s: MyFrame.cpp.s
+.PHONY : MyFrame.s
+
+# target to generate assembly for a file
+MyFrame.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/activityJournal.dir/build.make CMakeFiles/activityJournal.dir/MyFrame.cpp.s
+.PHONY : MyFrame.cpp.s
 
 # Help Target
 help:
@@ -162,9 +186,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... activityJournal"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... MyApp.o"
+	@echo "... MyApp.i"
+	@echo "... MyApp.s"
+	@echo "... MyFrame.o"
+	@echo "... MyFrame.i"
+	@echo "... MyFrame.s"
 .PHONY : help
 
 

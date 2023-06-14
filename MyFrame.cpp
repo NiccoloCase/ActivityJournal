@@ -1,43 +1,18 @@
+//
+// Created by Niccolò Caselli on 14/06/23.
+//
 
 #include <wx/wxprec.h>
 #ifndef WX_PRECOMP
 #include <wx/wx.h>
+#endif
+#include "MyFrame.h"
+#include "MyApp.h"
 #include <wx/datectrl.h>
 #include "MyScrollView.h"
 
-#endif
-
-class MyApp: public wxApp   {
-    public:
-        virtual bool OnInit();
-
-        static int windowWidth;
-        static int windowHeight;
-        static std::string appName;
-};
-
-class MyFrame: public wxFrame {
-    public:
-        MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size);
-    private:
-        // eventi:
-        void OnExit(wxCommandEvent& event);
-        void OnAbout(wxCommandEvent& event);
-        void OnSubmitButtonClicked(wxCommandEvent& event);
-        void OnTextInputChanged(wxCommandEvent& event);
-
-        wxDECLARE_EVENT_TABLE();
 
 
-
-};
-
-
-enum IDs {
-    SUBMIT_BUTTON_ID = 2,
-    TEXT_INPUT_ID = 3
-
-};
 
 wxBEGIN_EVENT_TABLE(MyFrame, wxFrame)
     EVT_MENU(wxID_EXIT,  MyFrame::OnExit)
@@ -45,24 +20,6 @@ wxBEGIN_EVENT_TABLE(MyFrame, wxFrame)
     EVT_BUTTON(SUBMIT_BUTTON_ID, MyFrame::OnSubmitButtonClicked)
     EVT_TEXT(TEXT_INPUT_ID, MyFrame::OnTextInputChanged)
 wxEND_EVENT_TABLE()
-wxIMPLEMENT_APP(MyApp);
-
-
-
-int MyApp::windowWidth = 600;
-int MyApp::windowHeight = 500;
-std::string MyApp::appName = "Activity Journal";
-
-bool MyApp::OnInit() {
-
-
-    MyFrame *frame = new MyFrame( appName, wxPoint(50, 50), wxSize(windowWidth, windowHeight) );
-
-
-    frame->Show( true );
-
-    return true;
-}
 
 
 
@@ -166,3 +123,4 @@ void MyFrame::OnTextInputChanged(wxCommandEvent &event) {
 
     std::cout << event.GetString();
 }
+

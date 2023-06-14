@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/activityJournal.dir/main.cpp.o"
-  "CMakeFiles/activityJournal.dir/main.cpp.o.d"
+  "CMakeFiles/activityJournal.dir/MyApp.cpp.o"
+  "CMakeFiles/activityJournal.dir/MyApp.cpp.o.d"
+  "CMakeFiles/activityJournal.dir/MyFrame.cpp.o"
+  "CMakeFiles/activityJournal.dir/MyFrame.cpp.o.d"
   "activityJournal"
   "activityJournal.pdb"
 )

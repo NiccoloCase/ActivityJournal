@@ -8,7 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/main.cpp" "CMakeFiles/activityJournal.dir/main.cpp.o" "gcc" "CMakeFiles/activityJournal.dir/main.cpp.o.d"
+  "/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/MyApp.cpp" "CMakeFiles/activityJournal.dir/MyApp.cpp.o" "gcc" "CMakeFiles/activityJournal.dir/MyApp.cpp.o.d"
+  "/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/MyFrame.cpp" "CMakeFiles/activityJournal.dir/MyFrame.cpp.o" "gcc" "CMakeFiles/activityJournal.dir/MyFrame.cpp.o.d"
   )
 
 # Targets to which this target links.
