@@ -1,0 +1,3 @@
+/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/cmake-build-debug/CMakeFiles/activityJournal.dir
+/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/cmake-build-debug/CMakeFiles/rebuild_cache.dir
