@@ -129,6 +129,78 @@ activityJournal/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/activityJournal.dir/build.make CMakeFiles/activityJournal.dir/build
 .PHONY : activityJournal/fast
 
+Activity.o: Activity.cpp.o
+.PHONY : Activity.o
+
+# target to build an object file
+Activity.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/activityJournal.dir/build.make CMakeFiles/activityJournal.dir/Activity.cpp.o
+.PHONY : Activity.cpp.o
+
+Activity.i: Activity.cpp.i
+.PHONY : Activity.i
+
+# target to preprocess a source file
+Activity.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/activityJournal.dir/build.make CMakeFiles/activityJournal.dir/Activity.cpp.i
+.PHONY : Activity.cpp.i
+
+Activity.s: Activity.cpp.s
+.PHONY : Activity.s
+
+# target to generate assembly for a file
+Activity.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/activityJournal.dir/build.make CMakeFiles/activityJournal.dir/Activity.cpp.s
+.PHONY : Activity.cpp.s
+
+ActivityManager.o: ActivityManager.cpp.o
+.PHONY : ActivityManager.o
+
+# target to build an object file
+ActivityManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/activityJournal.dir/build.make CMakeFiles/activityJournal.dir/ActivityManager.cpp.o
+.PHONY : ActivityManager.cpp.o
+
+ActivityManager.i: ActivityManager.cpp.i
+.PHONY : ActivityManager.i
+
+# target to preprocess a source file
+ActivityManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/activityJournal.dir/build.make CMakeFiles/activityJournal.dir/ActivityManager.cpp.i
+.PHONY : ActivityManager.cpp.i
+
+ActivityManager.s: ActivityManager.cpp.s
+.PHONY : ActivityManager.s
+
+# target to generate assembly for a file
+ActivityManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/activityJournal.dir/build.make CMakeFiles/activityJournal.dir/ActivityManager.cpp.s
+.PHONY : ActivityManager.cpp.s
+
+Day.o: Day.cpp.o
+.PHONY : Day.o
+
+# target to build an object file
+Day.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/activityJournal.dir/build.make CMakeFiles/activityJournal.dir/Day.cpp.o
+.PHONY : Day.cpp.o
+
+Day.i: Day.cpp.i
+.PHONY : Day.i
+
+# target to preprocess a source file
+Day.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/activityJournal.dir/build.make CMakeFiles/activityJournal.dir/Day.cpp.i
+.PHONY : Day.cpp.i
+
+Day.s: Day.cpp.s
+.PHONY : Day.s
+
+# target to generate assembly for a file
+Day.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/activityJournal.dir/build.make CMakeFiles/activityJournal.dir/Day.cpp.s
+.PHONY : Day.cpp.s
+
 MyApp.o: MyApp.cpp.o
 .PHONY : MyApp.o
 
@@ -186,6 +258,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... activityJournal"
+	@echo "... Activity.o"
+	@echo "... Activity.i"
+	@echo "... Activity.s"
+	@echo "... ActivityManager.o"
+	@echo "... ActivityManager.i"
+	@echo "... ActivityManager.s"
+	@echo "... Day.o"
+	@echo "... Day.i"
+	@echo "... Day.s"
 	@echo "... MyApp.o"
 	@echo "... MyApp.i"
 	@echo "... MyApp.s"

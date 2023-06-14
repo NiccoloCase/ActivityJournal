@@ -97,19 +97,67 @@ CMakeFiles/activityJournal.dir/MyApp.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/activityJournal.dir/MyApp.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/MyApp.cpp" -o CMakeFiles/activityJournal.dir/MyApp.cpp.s
 
+CMakeFiles/activityJournal.dir/ActivityManager.cpp.o: CMakeFiles/activityJournal.dir/flags.make
+CMakeFiles/activityJournal.dir/ActivityManager.cpp.o: /Users/niccolocaselli/Desktop/uni/Laboratorio\ di\ programmazione/activityJournal/ActivityManager.cpp
+CMakeFiles/activityJournal.dir/ActivityManager.cpp.o: CMakeFiles/activityJournal.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/activityJournal.dir/ActivityManager.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/activityJournal.dir/ActivityManager.cpp.o -MF CMakeFiles/activityJournal.dir/ActivityManager.cpp.o.d -o CMakeFiles/activityJournal.dir/ActivityManager.cpp.o -c "/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/ActivityManager.cpp"
+
+CMakeFiles/activityJournal.dir/ActivityManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/activityJournal.dir/ActivityManager.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/ActivityManager.cpp" > CMakeFiles/activityJournal.dir/ActivityManager.cpp.i
+
+CMakeFiles/activityJournal.dir/ActivityManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/activityJournal.dir/ActivityManager.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/ActivityManager.cpp" -o CMakeFiles/activityJournal.dir/ActivityManager.cpp.s
+
+CMakeFiles/activityJournal.dir/Day.cpp.o: CMakeFiles/activityJournal.dir/flags.make
+CMakeFiles/activityJournal.dir/Day.cpp.o: /Users/niccolocaselli/Desktop/uni/Laboratorio\ di\ programmazione/activityJournal/Day.cpp
+CMakeFiles/activityJournal.dir/Day.cpp.o: CMakeFiles/activityJournal.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/activityJournal.dir/Day.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/activityJournal.dir/Day.cpp.o -MF CMakeFiles/activityJournal.dir/Day.cpp.o.d -o CMakeFiles/activityJournal.dir/Day.cpp.o -c "/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/Day.cpp"
+
+CMakeFiles/activityJournal.dir/Day.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/activityJournal.dir/Day.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/Day.cpp" > CMakeFiles/activityJournal.dir/Day.cpp.i
+
+CMakeFiles/activityJournal.dir/Day.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/activityJournal.dir/Day.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/Day.cpp" -o CMakeFiles/activityJournal.dir/Day.cpp.s
+
+CMakeFiles/activityJournal.dir/Activity.cpp.o: CMakeFiles/activityJournal.dir/flags.make
+CMakeFiles/activityJournal.dir/Activity.cpp.o: /Users/niccolocaselli/Desktop/uni/Laboratorio\ di\ programmazione/activityJournal/Activity.cpp
+CMakeFiles/activityJournal.dir/Activity.cpp.o: CMakeFiles/activityJournal.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/activityJournal.dir/Activity.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/activityJournal.dir/Activity.cpp.o -MF CMakeFiles/activityJournal.dir/Activity.cpp.o.d -o CMakeFiles/activityJournal.dir/Activity.cpp.o -c "/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/Activity.cpp"
+
+CMakeFiles/activityJournal.dir/Activity.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/activityJournal.dir/Activity.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/Activity.cpp" > CMakeFiles/activityJournal.dir/Activity.cpp.i
+
+CMakeFiles/activityJournal.dir/Activity.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/activityJournal.dir/Activity.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/Activity.cpp" -o CMakeFiles/activityJournal.dir/Activity.cpp.s
+
 # Object files for target activityJournal
 activityJournal_OBJECTS = \
 "CMakeFiles/activityJournal.dir/MyFrame.cpp.o" \
-"CMakeFiles/activityJournal.dir/MyApp.cpp.o"
+"CMakeFiles/activityJournal.dir/MyApp.cpp.o" \
+"CMakeFiles/activityJournal.dir/ActivityManager.cpp.o" \
+"CMakeFiles/activityJournal.dir/Day.cpp.o" \
+"CMakeFiles/activityJournal.dir/Activity.cpp.o"
 
 # External object files for target activityJournal
 activityJournal_EXTERNAL_OBJECTS =
 
 activityJournal: CMakeFiles/activityJournal.dir/MyFrame.cpp.o
 activityJournal: CMakeFiles/activityJournal.dir/MyApp.cpp.o
+activityJournal: CMakeFiles/activityJournal.dir/ActivityManager.cpp.o
+activityJournal: CMakeFiles/activityJournal.dir/Day.cpp.o
+activityJournal: CMakeFiles/activityJournal.dir/Activity.cpp.o
 activityJournal: CMakeFiles/activityJournal.dir/build.make
 activityJournal: CMakeFiles/activityJournal.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable activityJournal"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable activityJournal"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/activityJournal.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

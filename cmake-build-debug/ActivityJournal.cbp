@@ -94,6 +94,24 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/Activity.cpp">
+			<Option target="activityJournal"/>
+		</Unit>
+		<Unit filename="/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/Activity.h">
+			<Option target="activityJournal"/>
+		</Unit>
+		<Unit filename="/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/ActivityManager.cpp">
+			<Option target="activityJournal"/>
+		</Unit>
+		<Unit filename="/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/ActivityManager.h">
+			<Option target="activityJournal"/>
+		</Unit>
+		<Unit filename="/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/Day.cpp">
+			<Option target="activityJournal"/>
+		</Unit>
+		<Unit filename="/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/Day.h">
+			<Option target="activityJournal"/>
+		</Unit>
 		<Unit filename="/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/MyApp.cpp">
 			<Option target="activityJournal"/>
 		</Unit>
@@ -107,6 +125,9 @@
 			<Option target="activityJournal"/>
 		</Unit>
 		<Unit filename="/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/MyScrollView.h">
+			<Option target="activityJournal"/>
+		</Unit>
+		<Unit filename="/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/Utils.h">
 			<Option target="activityJournal"/>
 		</Unit>
 		<Unit filename="/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/CMakeLists.txt">
