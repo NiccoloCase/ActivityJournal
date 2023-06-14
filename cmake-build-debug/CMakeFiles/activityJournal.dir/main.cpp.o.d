@@ -676,4 +676,5 @@ CMakeFiles/activityJournal.dir/main.cpp.o: \
   /opt/homebrew/include/wx-3.2/wx/datectrl.h \
   /opt/homebrew/include/wx-3.2/wx/datetimectrl.h \
   /opt/homebrew/include/wx-3.2/wx/osx/datetimectrl.h \
-  /opt/homebrew/include/wx-3.2/wx/osx/datectrl.h
+  /opt/homebrew/include/wx-3.2/wx/osx/datectrl.h \
+  /Users/niccolocaselli/Desktop/uni/Laboratorio\ di\ programmazione/activityJournal/MyScrollView.h

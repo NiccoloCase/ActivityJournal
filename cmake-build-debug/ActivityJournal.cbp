@@ -94,6 +94,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/MyScrollView.h">
+			<Option target="activityJournal"/>
+		</Unit>
 		<Unit filename="/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/main.cpp">
 			<Option target="activityJournal"/>
 		</Unit>
