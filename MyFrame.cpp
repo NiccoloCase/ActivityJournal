@@ -12,6 +12,8 @@
 #include "MyScrollView.h"
 #include <wx/timectrl.h>
 #include "ActivityManager.h"
+#include <ctime>
+#include "Utils.h"
 
 wxBEGIN_EVENT_TABLE(MyFrame, wxFrame)
     EVT_MENU(wxID_EXIT,  MyFrame::OnExit)
@@ -20,16 +22,12 @@ wxBEGIN_EVENT_TABLE(MyFrame, wxFrame)
     EVT_TEXT(TEXT_INPUT_ID, MyFrame::OnTextInputChanged)
     EVT_TIME_CHANGED(TIME_START_CTRL_ID, MyFrame::OnStartTimeSelected)
     EVT_TIME_CHANGED(TIME_END_CTRL_ID, MyFrame::OnEndTimeSelected)
+    EVT_TIME_CHANGED(TIME_END_CTRL_ID, MyFrame::OnDateSelected)
 wxEND_EVENT_TABLE()
 
 
 MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size)
         : wxFrame(NULL, wxID_ANY, title, pos, size, wxDEFAULT_FRAME_STYLE & ~(wxRESIZE_BORDER | wxMAXIMIZE_BOX)) {
-
-
-
-
-
 
 
 
@@ -67,11 +65,15 @@ MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size)
     input->SetHint("Inserisci la descrizione dell'attività");
     currentPosY += textInputHeight + 20;
 
+    // Date picker
+    new wxDatePickerCtrl(leftPanel, wxID_ANY, wxDefaultDateTime, wxPoint(MARGIN_HORIZONTAL, currentPosY), wxDefaultSize, wxDP_DEFAULT);
+    currentPosY+=40;
+
     // Time picker (1)
     new wxStaticText(leftPanel, wxID_ANY, "Inizio:",wxPoint(MARGIN_HORIZONTAL,currentPosY));
     currentPosY += 20;
     new wxTimePickerCtrl(leftPanel, TIME_START_CTRL_ID, wxDefaultDateTime, wxPoint(MARGIN_HORIZONTAL, currentPosY), wxDefaultSize, wxDP_DEFAULT);
-    currentPosY += 50;
+    currentPosY += 40;
 
     // Time picker (2)
     new wxStaticText(leftPanel, wxID_ANY, "Fine:",wxPoint(MARGIN_HORIZONTAL,currentPosY));
@@ -105,8 +107,7 @@ MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size)
 
 }
 
-// eventi
-
+// EVENTI
 void MyFrame::OnExit(wxCommandEvent& event) {
     Close( true );
 }
@@ -124,22 +125,37 @@ void MyFrame::OnSubmitButtonClicked(wxCommandEvent &event) {
 
    this->activityManager.addActivity( "s");
 
+    std::cout << "submit button clicked" << std::endl;
+    std::cout << myForm.getDescription() << std::endl;
+    std::cout << myForm.getStartTime() << std::endl;
+    std::cout << myForm.getEndTime() << std::endl;
+    std::cout << myForm.getDate() << std::endl;
 }
 
 void MyFrame::OnTextInputChanged(wxCommandEvent &event) {
-
+    myForm.setDescription(event.GetString().ToStdString());
     std::cout << event.GetString();
 }
 
 
 void MyFrame::OnStartTimeSelected(wxDateEvent &event) {
-auto date = event.GetDate();
+    auto date = event.GetDate();
+    std::time_t timeT = Utils::ConvertWxDateTimeToTimeT(date);
     std::cout << date.GetHour() << date.GetMinute()  << std::endl;
-
+    myForm.setStartTime(timeT);
 
 }
 
 void MyFrame::OnEndTimeSelected(wxDateEvent &event) {
+    auto date = event.GetDate();
+    std::time_t timeT = Utils::ConvertWxDateTimeToTimeT(date);
+    std::cout << date.GetHour() << date.GetMinute()  << std::endl;
+    myForm.setEndTime(timeT);
+}
 
-    std::cout << event.GetString();
+void MyFrame::OnDateSelected(wxDateEvent &event) {
+    auto date = event.GetDate();
+    std::time_t timeT = Utils::ConvertWxDateTimeToTimeT(date);
+    std::cout << date.GetHour() << date.GetMinute()  << std::endl;
+    myForm.setDate(timeT);
 }

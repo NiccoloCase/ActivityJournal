@@ -9,28 +9,30 @@
 #include <wx/wx.h>
 #endif
 #include "ActivityManager.h"
+#include "Form.h"
 
 #ifndef ACTIVITYJOURNAL_MYFRAME_H
 #define ACTIVITYJOURNAL_MYFRAME_H
 
 
 class MyFrame: public wxFrame {
-public:
-    MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size);
-private:
+    public:
+        MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size);
+    private:
 
+        ActivityManager activityManager;
+        Form myForm;
 
-    ActivityManager activityManager;
+        // eventi:
+        void OnExit(wxCommandEvent& event);
+        void OnAbout(wxCommandEvent& event);
+        void OnSubmitButtonClicked(wxCommandEvent& event);
+        void OnTextInputChanged(wxCommandEvent& event);
+        void OnStartTimeSelected(wxDateEvent& event);
+        void OnEndTimeSelected(wxDateEvent& event);
+        void OnDateSelected(wxDateEvent& event);
 
-    // eventi:
-    void OnExit(wxCommandEvent& event);
-    void OnAbout(wxCommandEvent& event);
-    void OnSubmitButtonClicked(wxCommandEvent& event);
-    void OnTextInputChanged(wxCommandEvent& event);
-    void OnStartTimeSelected(wxDateEvent& event);
-    void OnEndTimeSelected(wxDateEvent& event);
-
-    wxDECLARE_EVENT_TABLE();
+        wxDECLARE_EVENT_TABLE();
 
 };
 

@@ -201,6 +201,30 @@ Day.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/activityJournal.dir/build.make CMakeFiles/activityJournal.dir/Day.cpp.s
 .PHONY : Day.cpp.s
 
+Form.o: Form.cpp.o
+.PHONY : Form.o
+
+# target to build an object file
+Form.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/activityJournal.dir/build.make CMakeFiles/activityJournal.dir/Form.cpp.o
+.PHONY : Form.cpp.o
+
+Form.i: Form.cpp.i
+.PHONY : Form.i
+
+# target to preprocess a source file
+Form.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/activityJournal.dir/build.make CMakeFiles/activityJournal.dir/Form.cpp.i
+.PHONY : Form.cpp.i
+
+Form.s: Form.cpp.s
+.PHONY : Form.s
+
+# target to generate assembly for a file
+Form.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/activityJournal.dir/build.make CMakeFiles/activityJournal.dir/Form.cpp.s
+.PHONY : Form.cpp.s
+
 MyApp.o: MyApp.cpp.o
 .PHONY : MyApp.o
 
@@ -267,6 +291,9 @@ help:
 	@echo "... Day.o"
 	@echo "... Day.i"
 	@echo "... Day.s"
+	@echo "... Form.o"
+	@echo "... Form.i"
+	@echo "... Form.s"
 	@echo "... MyApp.o"
 	@echo "... MyApp.i"
 	@echo "... MyApp.s"
