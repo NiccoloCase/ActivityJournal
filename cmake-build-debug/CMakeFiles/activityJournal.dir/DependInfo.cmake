@@ -8,7 +8,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/Activity.cpp" "CMakeFiles/activityJournal.dir/Activity.cpp.o" "gcc" "CMakeFiles/activityJournal.dir/Activity.cpp.o.d"
   "/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/ActivityManager.cpp" "CMakeFiles/activityJournal.dir/ActivityManager.cpp.o" "gcc" "CMakeFiles/activityJournal.dir/ActivityManager.cpp.o.d"
   "/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/Day.cpp" "CMakeFiles/activityJournal.dir/Day.cpp.o" "gcc" "CMakeFiles/activityJournal.dir/Day.cpp.o.d"
   "/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/Form.cpp" "CMakeFiles/activityJournal.dir/Form.cpp.o" "gcc" "CMakeFiles/activityJournal.dir/Form.cpp.o.d"

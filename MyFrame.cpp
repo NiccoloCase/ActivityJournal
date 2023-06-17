@@ -12,7 +12,6 @@
 #include "MyScrollView.h"
 #include <wx/timectrl.h>
 #include "ActivityManager.h"
-#include <ctime>
 #include "Utils.h"
 
 wxBEGIN_EVENT_TABLE(MyFrame, wxFrame)
@@ -22,14 +21,13 @@ wxBEGIN_EVENT_TABLE(MyFrame, wxFrame)
     EVT_TEXT(TEXT_INPUT_ID, MyFrame::OnTextInputChanged)
     EVT_TIME_CHANGED(TIME_START_CTRL_ID, MyFrame::OnStartTimeSelected)
     EVT_TIME_CHANGED(TIME_END_CTRL_ID, MyFrame::OnEndTimeSelected)
-    EVT_TIME_CHANGED(TIME_END_CTRL_ID, MyFrame::OnDateSelected)
+    EVT_DATE_CHANGED(DATE_CTRL_ID, MyFrame::OnDateSelected)
+    EVT_DATE_CHANGED(SEARCH_DATE_CTRL_ID, MyFrame::OnSearchDateChanged)
 wxEND_EVENT_TABLE()
 
 
 MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size)
         : wxFrame(NULL, wxID_ANY, title, pos, size, wxDEFAULT_FRAME_STYLE & ~(wxRESIZE_BORDER | wxMAXIMIZE_BOX)) {
-
-
 
     // Crea la barra di stato
     CreateStatusBar();
@@ -66,7 +64,7 @@ MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size)
     currentPosY += textInputHeight + 20;
 
     // Date picker
-    new wxDatePickerCtrl(leftPanel, wxID_ANY, wxDefaultDateTime, wxPoint(MARGIN_HORIZONTAL, currentPosY), wxDefaultSize, wxDP_DEFAULT);
+    new wxDatePickerCtrl(leftPanel, DATE_CTRL_ID, wxDefaultDateTime, wxPoint(MARGIN_HORIZONTAL, currentPosY), wxDefaultSize, wxDP_DEFAULT);
     currentPosY+=40;
 
     // Time picker (1)
@@ -96,18 +94,19 @@ MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size)
     currentPosY+=TITLE_MARGIN_BOTTOM;
 
     // Date picker
-    new wxDatePickerCtrl(rightPanel, wxID_ANY, wxDefaultDateTime, wxPoint(MARGIN_HORIZONTAL, currentPosY), wxDefaultSize, wxDP_DEFAULT);
+    new wxDatePickerCtrl(rightPanel, SEARCH_DATE_CTRL_ID, wxDefaultDateTime, wxPoint(MARGIN_HORIZONTAL, currentPosY), wxDefaultSize, wxDP_DEFAULT);
     currentPosY+=40;
 
     // Crea una finestra con scorrimento
-    MyScrollView* scrollWindow = new MyScrollView(rightPanel, wxPoint(MARGIN_HORIZONTAL, currentPosY), &activityManager);
-
-
-
+    MyScrollView* scrollWindow = new MyScrollView(rightPanel, wxPoint(MARGIN_HORIZONTAL, currentPosY), &activityManager, &myForm);
 
 }
 
-// EVENTI
+
+///////////////////
+////// EVENTI \\\\\\
+\\\\\\\\\\\\\\\\\\\\
+
 void MyFrame::OnExit(wxCommandEvent& event) {
     Close( true );
 }
@@ -117,19 +116,23 @@ void MyFrame::OnAbout(wxCommandEvent& event) {
                   "About Hello World", wxOK | wxICON_INFORMATION );
 }
 
-
 void MyFrame::OnSubmitButtonClicked(wxCommandEvent &event) {
    /* wxMessageBox( "titlo",
                   "descrizione", wxOK );*/
-
-
-   this->activityManager.addActivity( "s");
+   // TODO: controllare validità dati
 
     std::cout << "submit button clicked" << std::endl;
-    std::cout << myForm.getDescription() << std::endl;
-    std::cout << myForm.getStartTime() << std::endl;
-    std::cout << myForm.getEndTime() << std::endl;
-    std::cout << myForm.getDate() << std::endl;
+    std::cout << "description: " << myForm.getDescription() << std::endl;
+    std::cout << "start time: " << myForm.getStartTime() << std::endl;
+    std::cout << "end time: " << myForm.getEndTime() << std::endl;
+    std::cout << "date: " << myForm.getDate() << std::endl;
+
+    // Aggiunge la nuova attività
+    activityManager.addActivity( myForm.getDescription());
+
+    // Notifica gli observer
+    myForm.notifyObservers();
+
 }
 
 void MyFrame::OnTextInputChanged(wxCommandEvent &event) {
@@ -156,6 +159,13 @@ void MyFrame::OnEndTimeSelected(wxDateEvent &event) {
 void MyFrame::OnDateSelected(wxDateEvent &event) {
     auto date = event.GetDate();
     std::time_t timeT = Utils::ConvertWxDateTimeToTimeT(date);
-    std::cout << date.GetHour() << date.GetMinute()  << std::endl;
+    std::cout << date.GetDay() << "/" << date.GetMonth()<< "/" << date.GetYear()<< std::endl;
     myForm.setDate(timeT);
+}
+
+void MyFrame::OnSearchDateChanged(wxDateEvent &event) {
+    auto date = event.GetDate();
+    std::time_t timeT = Utils::ConvertWxDateTimeToTimeT(date);
+    std::cout << date.GetDay() << "/" << date.GetMonth()<< "/" << date.GetYear()<< std::endl;
+    myForm.setSearchDate(timeT);
 }

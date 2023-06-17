@@ -129,30 +129,6 @@ activityJournal/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/activityJournal.dir/build.make CMakeFiles/activityJournal.dir/build
 .PHONY : activityJournal/fast
 
-Activity.o: Activity.cpp.o
-.PHONY : Activity.o
-
-# target to build an object file
-Activity.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/activityJournal.dir/build.make CMakeFiles/activityJournal.dir/Activity.cpp.o
-.PHONY : Activity.cpp.o
-
-Activity.i: Activity.cpp.i
-.PHONY : Activity.i
-
-# target to preprocess a source file
-Activity.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/activityJournal.dir/build.make CMakeFiles/activityJournal.dir/Activity.cpp.i
-.PHONY : Activity.cpp.i
-
-Activity.s: Activity.cpp.s
-.PHONY : Activity.s
-
-# target to generate assembly for a file
-Activity.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/activityJournal.dir/build.make CMakeFiles/activityJournal.dir/Activity.cpp.s
-.PHONY : Activity.cpp.s
-
 ActivityManager.o: ActivityManager.cpp.o
 .PHONY : ActivityManager.o
 
@@ -282,9 +258,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... activityJournal"
-	@echo "... Activity.o"
-	@echo "... Activity.i"
-	@echo "... Activity.s"
 	@echo "... ActivityManager.o"
 	@echo "... ActivityManager.i"
 	@echo "... ActivityManager.s"

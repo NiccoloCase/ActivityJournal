@@ -31,17 +31,18 @@ class MyFrame: public wxFrame {
         void OnStartTimeSelected(wxDateEvent& event);
         void OnEndTimeSelected(wxDateEvent& event);
         void OnDateSelected(wxDateEvent& event);
+        void OnSearchDateChanged(wxDateEvent& event);
 
         wxDECLARE_EVENT_TABLE();
-
 };
 
 enum IDs {
     SUBMIT_BUTTON_ID = 2,
     TEXT_INPUT_ID = 3,
     TIME_START_CTRL_ID = 4,
-    TIME_END_CTRL_ID = 5
-
+    TIME_END_CTRL_ID = 5,
+    DATE_CTRL_ID = 6,
+    SEARCH_DATE_CTRL_ID = 7
 };
 
 

@@ -35,3 +35,12 @@ time_t Form::getDate() const {
 void Form::setDate(time_t date) {
     Form::date = date;
 }
+
+time_t Form::getSearchDate() const {
+    return date;
+}
+
+void Form::setSearchDate(time_t date) {
+    Form::date = date;
+    notifyObservers();
+}

@@ -34,16 +34,24 @@ class Utils {
          * Converte in una data in formato time_t da una wxDateTime
          * @param wxdt
          */
-        static std::time_t ConvertWxDateTimeToTimeT(const wxDateTime& wxdt){
-            std::tm timeStruct;
-            timeStruct.tm_year = wxdt.GetYear() - 1900;
-            timeStruct.tm_mon = wxdt.GetMonth() - 1;
-            timeStruct.tm_mday = wxdt.GetDay();
-            timeStruct.tm_hour = wxdt.GetHour();
-            timeStruct.tm_min = wxdt.GetMinute();
-            timeStruct.tm_sec = wxdt.GetSecond();
-            return std::mktime(&timeStruct);
-        }
+        static std::time_t ConvertWxDateTimeToTimeT(const wxDateTime& dateTime) {
+            int year = dateTime.GetYear();
+            int month = static_cast<int>(dateTime.GetMonth()) + 1;
+            int day = dateTime.GetDay();
+            int hour = dateTime.GetHour();
+            int minute = dateTime.GetMinute();
+            int second = dateTime.GetSecond();
+
+            std::tm timeInfo{};
+            timeInfo.tm_year = year - 1900;   // Years since 1900
+            timeInfo.tm_mon = month - 1;      // Months range from 0 to 11
+            timeInfo.tm_mday = day;
+            timeInfo.tm_hour = hour;
+            timeInfo.tm_min = minute;
+            timeInfo.tm_sec = second;
+
+            return std::mktime(&timeInfo);
+    }
 };
 
 
