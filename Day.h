@@ -15,13 +15,28 @@
 
 class Day {
     public:
-
         Day(std::tm date) : date(date) { }
 
+        /**
+         * Aggiunge un'attività alla giornata
+         * @param description
+         */
         void addActivity(std::string description);
 
+        /**
+         * Restituisce la data della giornata
+         * @return
+         */
         std::tm getDate() const{
             return date;
+        }
+
+        /**
+         * Restituisce la lista di tutte le attività della giornata
+         * @return
+         */
+        std::list<Activity*> getActivities() const{
+            return activities;
         }
 
     private:

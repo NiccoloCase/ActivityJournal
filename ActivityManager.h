@@ -10,6 +10,8 @@
 #include "stdio.h"
 #include <list>
 #include "Day.h"
+#include "Activity.h"
+
 
 class ActivityManager {
 
@@ -20,6 +22,11 @@ class ActivityManager {
          */
          void addActivity(std::string description);
 
+         /**
+          * Restituisce la lista di tutte le attività di un giorno specifico
+          * @param date
+          */
+         std::list<Activity*> getActivitiesByDate(std::tm date) const;
     private:
          std::list<Day*> daysList;
 };

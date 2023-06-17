@@ -8,9 +8,19 @@
 #include <ctime>
 #include <wx/datetime.h>
 
-
 class Utils {
     public:
+
+        /**
+         * Restituisce la data corrente
+         * @return
+         */
+        static std::tm getCurrentDate() {
+            std::time_t now = std::time(0);
+            std::tm* currentTime = std::localtime(&now);
+            return *currentTime;
+        }
+
         /**
          * Verifica se due date sono dello stesso giorno
          */
@@ -19,7 +29,6 @@ class Utils {
                     date1.tm_mon == date2.tm_mon &&
                     date1.tm_mday == date2.tm_mday);
         }
-
 
         /**
          * Converte in una data in formato time_t da una wxDateTime
