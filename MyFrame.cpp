@@ -38,7 +38,7 @@ MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size)
     leftPanel->SetBackgroundColour(wxColour("#1B1B3A"));
 
     auto rightPanel = new wxPanel(this,wxID_ANY,wxPoint(MyApp::windowWidth/2,0), wxSize(MyApp::windowWidth/2,MyApp::windowHeight));
-    rightPanel->SetBackgroundColour(wxColour("orange"));
+    rightPanel->SetBackgroundColour(wxColour("#025464"));
 
     // Costanti
     int MARGIN_HORIZONTAL = 20;
@@ -58,9 +58,9 @@ MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size)
 
     // Text input
     int textInputHeight = 150;
-    auto input = new wxTextCtrl(leftPanel, TEXT_INPUT_ID, "", wxPoint(MARGIN_HORIZONTAL,currentPosY), wxSize(MyApp::windowWidth/2-MARGIN_HORIZONTAL*2,textInputHeight));
-    input->SetBackgroundColour("#693668");
-    input->SetHint("Inserisci la descrizione dell'attività");
+    textInput = new wxTextCtrl(leftPanel, TEXT_INPUT_ID, "", wxPoint(MARGIN_HORIZONTAL,currentPosY), wxSize(MyApp::windowWidth/2-MARGIN_HORIZONTAL*2,textInputHeight));
+    textInput->SetBackgroundColour("#212148");
+    textInput->SetHint("Inserisci la descrizione dell'attività");
     currentPosY += textInputHeight + 20;
 
     // Date picker
@@ -70,8 +70,10 @@ MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size)
     // Time picker (1)
     new wxStaticText(leftPanel, wxID_ANY, "Inizio:",wxPoint(MARGIN_HORIZONTAL,currentPosY));
     currentPosY += 20;
-    new wxTimePickerCtrl(leftPanel, TIME_START_CTRL_ID, wxDefaultDateTime, wxPoint(MARGIN_HORIZONTAL, currentPosY), wxDefaultSize, wxDP_DEFAULT);
+    auto textPicker1 = new wxTimePickerCtrl(leftPanel, TIME_START_CTRL_ID, wxDefaultDateTime, wxPoint(MARGIN_HORIZONTAL, currentPosY), wxDefaultSize, wxDP_DEFAULT);
+        //textPicker1->SetTime(myForm.getStartTime()); // TODO: non funziona
     currentPosY += 40;
+
 
     // Time picker (2)
     new wxStaticText(leftPanel, wxID_ANY, "Fine:",wxPoint(MARGIN_HORIZONTAL,currentPosY));
@@ -98,8 +100,14 @@ MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size)
     currentPosY+=40;
 
     // Crea una finestra con scorrimento
-    MyScrollView* scrollWindow = new MyScrollView(rightPanel, wxPoint(MARGIN_HORIZONTAL, currentPosY), &activityManager, &myForm);
+    auto scrollView = new MyScrollView(
+            rightPanel,
+            wxPoint(MARGIN_HORIZONTAL, currentPosY),
+            wxSize(rightPanel->GetSize().GetWidth()-MARGIN_HORIZONTAL*2,rightPanel->GetSize().GetHeight()-pos.y-50),
+            &activityManager, &myForm
+            );
 
+    scrollView->SetBackgroundColour("#026478");
 }
 
 
@@ -117,9 +125,6 @@ void MyFrame::OnAbout(wxCommandEvent& event) {
 }
 
 void MyFrame::OnSubmitButtonClicked(wxCommandEvent &event) {
-   /* wxMessageBox( "titlo",
-                  "descrizione", wxOK );*/
-   // TODO: controllare validità dati
 
     std::cout << "submit button clicked" << std::endl;
     std::cout << "description: " << myForm.getDescription() << std::endl;
@@ -127,8 +132,21 @@ void MyFrame::OnSubmitButtonClicked(wxCommandEvent &event) {
     std::cout << "end time: " << myForm.getEndTime() << std::endl;
     std::cout << "date: " << myForm.getDate() << std::endl;
 
+    // Valida il form
+    if(!myForm.validateForm()) {
+        wxMessageBox("I dati inseriti non sono validi", "Errore", wxOK | wxICON_ERROR, this);
+        return;
+    }
+
     // Aggiunge la nuova attività
-    activityManager.addActivity( myForm.getDescription());
+    std::time_t startTime = myForm.getStartTime();
+    std::time_t endTime = myForm.getEndTime();
+
+    activityManager.addActivity( new Activity(myForm.getDescription(), *std::localtime(&startTime), *std::localtime(&endTime)));
+
+    // Resetta il formli
+    myForm.setDescription("");
+    textInput->Clear();
 
     // Notifica gli observer
     myForm.notifyObservers();
@@ -143,7 +161,7 @@ void MyFrame::OnTextInputChanged(wxCommandEvent &event) {
 
 void MyFrame::OnStartTimeSelected(wxDateEvent &event) {
     auto date = event.GetDate();
-    std::time_t timeT = Utils::ConvertWxDateTimeToTimeT(date);
+    std::time_t timeT = Utils::convertWxDateTimeToTimeT(date);
     std::cout << date.GetHour() << date.GetMinute()  << std::endl;
     myForm.setStartTime(timeT);
 
@@ -151,21 +169,21 @@ void MyFrame::OnStartTimeSelected(wxDateEvent &event) {
 
 void MyFrame::OnEndTimeSelected(wxDateEvent &event) {
     auto date = event.GetDate();
-    std::time_t timeT = Utils::ConvertWxDateTimeToTimeT(date);
+    std::time_t timeT = Utils::convertWxDateTimeToTimeT(date);
     std::cout << date.GetHour() << date.GetMinute()  << std::endl;
     myForm.setEndTime(timeT);
 }
 
 void MyFrame::OnDateSelected(wxDateEvent &event) {
     auto date = event.GetDate();
-    std::time_t timeT = Utils::ConvertWxDateTimeToTimeT(date);
+    std::time_t timeT = Utils::convertWxDateTimeToTimeT(date);
     std::cout << date.GetDay() << "/" << date.GetMonth()<< "/" << date.GetYear()<< std::endl;
     myForm.setDate(timeT);
 }
 
 void MyFrame::OnSearchDateChanged(wxDateEvent &event) {
     auto date = event.GetDate();
-    std::time_t timeT = Utils::ConvertWxDateTimeToTimeT(date);
+    std::time_t timeT = Utils::convertWxDateTimeToTimeT(date);
     std::cout << date.GetDay() << "/" << date.GetMonth()<< "/" << date.GetYear()<< std::endl;
     myForm.setSearchDate(timeT);
 }

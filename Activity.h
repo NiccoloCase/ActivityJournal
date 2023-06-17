@@ -9,18 +9,38 @@
 
 class Activity {
     public:
-        Activity(std::string description) : description(description) {}
+        Activity(std::string description, std::tm startTime, std::tm endTime) : description(description), startTime(startTime),endTime(endTime) {}
 
-        const std::string &getDescription() const {
+
+    const std::string &getDescription() const {
             return description;
         }
 
-        void setDescription(const std::string &description) {
-            Activity::description = description;
-        }
+    void setDescription(const std::string &description) {
+        Activity::description = description;
+    }
+
+    const std::tm &getStartTime() const {
+        return startTime;
+    }
+
+    void setStartTime(const std::tm &startTime) {
+        Activity::startTime = startTime;
+    }
+
+    const std::tm &getEndTime() const {
+        return endTime;
+    }
+
+    void setEndTime(const std::tm &endTime) {
+        Activity::endTime = endTime;
+    }
 
     private:
         std::string description;
+        std::tm startTime;
+        std::tm endTime;
+
 
 };
 

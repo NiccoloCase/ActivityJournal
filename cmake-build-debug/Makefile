@@ -153,30 +153,6 @@ ActivityManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/activityJournal.dir/build.make CMakeFiles/activityJournal.dir/ActivityManager.cpp.s
 .PHONY : ActivityManager.cpp.s
 
-Day.o: Day.cpp.o
-.PHONY : Day.o
-
-# target to build an object file
-Day.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/activityJournal.dir/build.make CMakeFiles/activityJournal.dir/Day.cpp.o
-.PHONY : Day.cpp.o
-
-Day.i: Day.cpp.i
-.PHONY : Day.i
-
-# target to preprocess a source file
-Day.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/activityJournal.dir/build.make CMakeFiles/activityJournal.dir/Day.cpp.i
-.PHONY : Day.cpp.i
-
-Day.s: Day.cpp.s
-.PHONY : Day.s
-
-# target to generate assembly for a file
-Day.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/activityJournal.dir/build.make CMakeFiles/activityJournal.dir/Day.cpp.s
-.PHONY : Day.cpp.s
-
 Form.o: Form.cpp.o
 .PHONY : Form.o
 
@@ -261,9 +237,6 @@ help:
 	@echo "... ActivityManager.o"
 	@echo "... ActivityManager.i"
 	@echo "... ActivityManager.s"
-	@echo "... Day.o"
-	@echo "... Day.i"
-	@echo "... Day.s"
 	@echo "... Form.o"
 	@echo "... Form.i"
 	@echo "... Form.s"

@@ -37,10 +37,20 @@ void Form::setDate(time_t date) {
 }
 
 time_t Form::getSearchDate() const {
-    return date;
+    return searchDate;
 }
 
 void Form::setSearchDate(time_t date) {
-    Form::date = date;
+    Form::searchDate = date;
     notifyObservers();
+}
+
+
+bool Form::validateForm() const {
+    // Controlla se la descrizione è vuota
+    if(description.empty()) return false;
+    // Controlla se la data di inizio è prima della data di fine
+    //if(startTime > endTime) return false; // TODO:remove controllo
+
+    return true;
 }

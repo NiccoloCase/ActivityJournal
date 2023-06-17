@@ -20,7 +20,7 @@ class ActivityManager {
          * Aggiunge un'attività alla giornata corrente
          * @param description
          */
-         void addActivity(std::string description);
+         void addActivity(Activity* activity);
 
          /**
           * Restituisce la lista di tutte le attività di un giorno specifico

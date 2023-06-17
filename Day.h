@@ -19,9 +19,11 @@ class Day {
 
         /**
          * Aggiunge un'attività alla giornata
-         * @param description
+         * @param activity
          */
-        void addActivity(std::string description);
+        void addActivity(Activity*activity) {
+            activities.push_back(activity);
+        }
 
         /**
          * Restituisce la data della giornata

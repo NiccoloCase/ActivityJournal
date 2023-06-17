@@ -23,6 +23,8 @@ class MyFrame: public wxFrame {
         ActivityManager activityManager;
         Form myForm;
 
+        wxTextCtrl* textInput;
+
         // eventi:
         void OnExit(wxCommandEvent& event);
         void OnAbout(wxCommandEvent& event);

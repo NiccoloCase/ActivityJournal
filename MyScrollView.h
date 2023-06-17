@@ -14,29 +14,67 @@
 class MyScrollView : public wxScrolledWindow, public Observer {
 
 public:
-    MyScrollView(wxWindow* parent, wxPoint point, ActivityManager* activityManager, Form* subject)
-            : wxScrolledWindow(parent, wxID_ANY, point), subject(subject), activityManager(activityManager){
+    MyScrollView(wxWindow* parent,wxPoint pos,wxSize size, ActivityManager* activityManager, Form* subject):
+        subject(subject), wxScrolledWindow(parent, wxID_ANY, pos),
+        activityManager(activityManager), size(size), pos(pos){
 
-        // Regsitra l'observer
+        // Registra l'observer
         subject->registerObserver(this);
 
 
-        // Crea un sizer per il contenuto
-        wxBoxSizer* sizer = new wxBoxSizer(wxVERTICAL);
 
-        // Aggiungi il contenuto desiderato al sizer
-        for (auto activity : shownActivities){
-            wxStaticText* text = new wxStaticText(this, wxID_ANY, wxString(activity->getDescription()));
-            sizer->Add(text, 0, wxALL, 10);
+
+        // GARFICA
+        drawActivities();
+    }
+
+
+    void drawActivities() {
+        if (sizer != nullptr){
+            sizer->Clear(true);
+            std::cout << "Cleared sizer" << std::endl;
         }
 
-        // Imposta il sizer come sizer del controllo
-        SetSizer(sizer);
+        sizer = new wxBoxSizer(wxVERTICAL);
 
-        // Calcola la dimensione del contenuto
-        sizer->Fit(this);
-        sizer->SetSizeHints(this);
+        for (auto activity : shownActivities){
+           wxStaticText* text = new wxStaticText(this, wxID_ANY, wxString(activity->getDescription()));
+           text->SetBackgroundColour(wxColour("#02758c"));
+           auto textFont = text->GetFont();
+            textFont.SetPointSize(15);
+           text->SetFont(textFont);
+
+           sizer->Add(text, 0, wxALL, 10);
+
+
+
+            wxStaticText* startTimeText = new wxStaticText(this, wxID_ANY, wxString(Utils::formatTime(activity->getStartTime())));
+            auto startTimeTextFont = startTimeText->GetFont();
+            startTimeTextFont.SetPointSize(10);
+            startTimeText->SetFont(startTimeTextFont);
+
+            sizer->Add(startTimeText, 0, wxALL, 10);
+
+        }
+
+        // TODO: remove
+      /*  for (int i = 0; i < 200; i++) {
+             wxStaticText* text = new wxStaticText(this, wxID_ANY, wxString::Format("%d) Elemento", i+1));
+             text->SetBackgroundColour(wxColour("red"));
+             text->SetSize(wxSize(200, 100));
+             sizer->Add(text, 0, wxALL, 5);
+         }
+*/
+        SetSizer(sizer);
+        SetSize(size);
+        SetVirtualSize(size.GetWidth(),10000);
+
+
+        SetScrollRate(10, 10);
+        EnableScrolling(false, true);
     }
+
+
 
     ~MyScrollView() {
         subject->removeObserver( this );
@@ -48,13 +86,16 @@ public:
         auto date = subject->getSearchDate();
 
         fetchActivitiesToShow(date);
+        drawActivities();
     }
 
 private:
     ActivityManager* activityManager;
     Form* subject;
     std::list<Activity*> shownActivities;
-
+    wxBoxSizer* sizer;
+    wxSize size;
+    wxPoint pos;
 
 
     /**
@@ -68,7 +109,6 @@ private:
         for (auto activity : shownActivities){
             std::cout << "description: "<< activity->getDescription() << std::endl;
         }
-
     }
 
 };

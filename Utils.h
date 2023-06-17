@@ -34,7 +34,7 @@ class Utils {
          * Converte in una data in formato time_t da una wxDateTime
          * @param wxdt
          */
-        static std::time_t ConvertWxDateTimeToTimeT(const wxDateTime& dateTime) {
+        static std::time_t convertWxDateTimeToTimeT(const wxDateTime& dateTime) {
             int year = dateTime.GetYear();
             int month = static_cast<int>(dateTime.GetMonth()) + 1;
             int day = dateTime.GetDay();
@@ -52,6 +52,13 @@ class Utils {
 
             return std::mktime(&timeInfo);
     }
+
+    static std::string formatTime(std::tm time){
+        char buffer[6];
+        std::strftime(buffer, sizeof(buffer), "%H:%M", &time);
+        std::string timeString(buffer);
+        return timeString;
+        }
 };
 
 

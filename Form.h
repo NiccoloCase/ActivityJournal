@@ -65,6 +65,12 @@ class Form: Subject {
             observers.remove(observer);
         }
 
+        /**
+         * Metodo che valida i dati del form
+         * @return Restituisce se il form è valido
+         */
+        bool validateForm() const;
+
     private:
         // dati del form:
         std::string description;
