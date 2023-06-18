@@ -49,9 +49,7 @@ public:
 
 
             wxStaticText* startTimeText = new wxStaticText(this, wxID_ANY, wxString(Utils::formatTime(activity->getStartTime())));
-            auto startTimeTextFont = startTimeText->GetFont();
-            startTimeTextFont.SetPointSize(10);
-            startTimeText->SetFont(startTimeTextFont);
+
 
             sizer->Add(startTimeText, 0, wxALL, 10);
 

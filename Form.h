@@ -22,6 +22,10 @@ class Form: Subject {
         Form(){
             date = std::time(0);
             searchDate = std::time(0);
+            // initilalize varibailes to current time
+            startTime =Utils::getTodayTime();
+            endTime = std::time(0);
+
         }
 
         const std::string &getDescription() const;
