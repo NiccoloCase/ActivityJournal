@@ -825,7 +825,101 @@ CMakeFiles/activityJournal.dir/Form.cpp.o: /Users/niccolocaselli/Desktop/uni/Lab
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/_types/_wctrans_t.h \
   /Users/niccolocaselli/Desktop/uni/Laboratorio\ di\ programmazione/activityJournal/Subject.h \
   /Users/niccolocaselli/Desktop/uni/Laboratorio\ di\ programmazione/activityJournal/Observer.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/list
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/list \
+  /Users/niccolocaselli/Desktop/uni/Laboratorio\ di\ programmazione/activityJournal/Utils.h \
+  /opt/homebrew/include/wx-3.2/wx/datetime.h \
+  /opt/homebrew/include/wx-3.2/wx/defs.h \
+  /opt/homebrew/include/wx-3.2/wx/platform.h \
+  /opt/homebrew/include/wx-3.2/wx/compiler.h \
+  /opt/homebrew/lib/wx/include/osx_cocoa-unicode-3.2/wx/setup.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/TargetConditionals.h \
+  /opt/homebrew/include/wx-3.2/wx/chkconf.h \
+  /opt/homebrew/include/wx-3.2/wx/osx/chkconf.h \
+  /opt/homebrew/include/wx-3.2/wx/osx/cocoa/chkconf.h \
+  /opt/homebrew/include/wx-3.2/wx/unix/chkconf.h \
+  /opt/homebrew/include/wx-3.2/wx/version.h \
+  /opt/homebrew/include/wx-3.2/wx/cpp.h \
+  /opt/homebrew/include/wx-3.2/wx/dlimpexp.h \
+  /opt/homebrew/include/wx-3.2/wx/types.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/types.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_u_char.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_u_short.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_u_int.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_caddr_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_blkcnt_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_blksize_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_gid_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_in_addr_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_in_port_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_ino_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_ino64_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_key_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_nlink_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_useconds_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_suseconds_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_fd_def.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_fd_setsize.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_fd_set.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_fd_clr.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_fd_zero.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_fd_isset.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_fd_copy.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_fsblkcnt_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_fsfilcnt_t.h \
+  /opt/homebrew/include/wx-3.2/wx/debug.h \
+  /opt/homebrew/include/wx-3.2/wx/chartype.h \
+  /opt/homebrew/include/wx-3.2/wx/features.h \
+  /opt/homebrew/include/wx-3.2/wx/longlong.h \
+  /opt/homebrew/include/wx-3.2/wx/string.h \
+  /opt/homebrew/include/wx-3.2/wx/wxcrtbase.h \
+  /opt/homebrew/include/wx-3.2/wx/strvararg.h \
+  /opt/homebrew/include/wx-3.2/wx/strconv.h \
+  /opt/homebrew/include/wx-3.2/wx/buffer.h \
+  /opt/homebrew/include/wx-3.2/wx/fontenc.h \
+  /opt/homebrew/include/wx-3.2/wx/unichar.h \
+  /opt/homebrew/include/wx-3.2/wx/stringimpl.h \
+  /opt/homebrew/include/wx-3.2/wx/beforestd.h \
+  /opt/homebrew/include/wx-3.2/wx/afterstd.h \
+  /opt/homebrew/include/wx-3.2/wx/stringops.h \
+  /opt/homebrew/include/wx-3.2/wx/iosfwrap.h \
+  /opt/homebrew/include/wx-3.2/wx/anystr.h \
+  /opt/homebrew/include/wx-3.2/wx/dynarray.h \
+  /opt/homebrew/include/wx-3.2/wx/vector.h \
+  /opt/homebrew/include/wx-3.2/wx/scopeguard.h \
+  /opt/homebrew/include/wx-3.2/wx/except.h \
+  /opt/homebrew/include/wx-3.2/wx/meta/movable.h \
+  /opt/homebrew/include/wx-3.2/wx/meta/pod.h \
+  /opt/homebrew/include/wx-3.2/wx/meta/if.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/iostream \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/ios \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__locale \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/mutex \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__mutex_base \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/system_error \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__errc \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/cerrno \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/locale.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/locale.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/_locale.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/xlocale.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/_xlocale.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/xlocale/_ctype.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/xlocale/__wctype.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/xlocale/_stdio.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/xlocale/_stdlib.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/xlocale/_string.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/xlocale/_time.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/xlocale/_wchar.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/xlocale/_wctype.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/istream \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/ostream \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/bitset \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__bit_reference \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/locale \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/streambuf \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/nl_types.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/_types/_nl_item.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__bsd_locale_defaults.h
 
 CMakeFiles/activityJournal.dir/MyApp.cpp.o: /Users/niccolocaselli/Desktop/uni/Laboratorio\ di\ programmazione/activityJournal/MyApp.cpp \
   /Users/niccolocaselli/Desktop/uni/Laboratorio\ di\ programmazione/activityJournal/MyApp.h \
@@ -1514,7 +1608,8 @@ CMakeFiles/activityJournal.dir/MyApp.cpp.o: /Users/niccolocaselli/Desktop/uni/La
   /Users/niccolocaselli/Desktop/uni/Laboratorio\ di\ programmazione/activityJournal/Activity.h \
   /Users/niccolocaselli/Desktop/uni/Laboratorio\ di\ programmazione/activityJournal/Form.h \
   /Users/niccolocaselli/Desktop/uni/Laboratorio\ di\ programmazione/activityJournal/Subject.h \
-  /Users/niccolocaselli/Desktop/uni/Laboratorio\ di\ programmazione/activityJournal/Observer.h
+  /Users/niccolocaselli/Desktop/uni/Laboratorio\ di\ programmazione/activityJournal/Observer.h \
+  /Users/niccolocaselli/Desktop/uni/Laboratorio\ di\ programmazione/activityJournal/Utils.h
 
 CMakeFiles/activityJournal.dir/MyFrame.cpp.o: /Users/niccolocaselli/Desktop/uni/Laboratorio\ di\ programmazione/activityJournal/MyFrame.cpp \
   /opt/homebrew/include/wx-3.2/wx/wxprec.h \
@@ -2203,11 +2298,11 @@ CMakeFiles/activityJournal.dir/MyFrame.cpp.o: /Users/niccolocaselli/Desktop/uni/
   /Users/niccolocaselli/Desktop/uni/Laboratorio\ di\ programmazione/activityJournal/Form.h \
   /Users/niccolocaselli/Desktop/uni/Laboratorio\ di\ programmazione/activityJournal/Subject.h \
   /Users/niccolocaselli/Desktop/uni/Laboratorio\ di\ programmazione/activityJournal/Observer.h \
+  /Users/niccolocaselli/Desktop/uni/Laboratorio\ di\ programmazione/activityJournal/Utils.h \
   /Users/niccolocaselli/Desktop/uni/Laboratorio\ di\ programmazione/activityJournal/MyApp.h \
   /opt/homebrew/include/wx-3.2/wx/datectrl.h \
   /opt/homebrew/include/wx-3.2/wx/osx/datectrl.h \
-  /Users/niccolocaselli/Desktop/uni/Laboratorio\ di\ programmazione/activityJournal/MyScrollView.h \
-  /Users/niccolocaselli/Desktop/uni/Laboratorio\ di\ programmazione/activityJournal/Utils.h
+  /Users/niccolocaselli/Desktop/uni/Laboratorio\ di\ programmazione/activityJournal/MyScrollView.h
 
 
 /Users/niccolocaselli/Desktop/uni/Laboratorio\ di\ programmazione/activityJournal/MyScrollView.h:

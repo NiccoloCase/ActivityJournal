@@ -7,6 +7,7 @@
 
 #include <ctime>
 #include <wx/datetime.h>
+#include <iostream>
 
 class Utils {
     public:
@@ -46,13 +47,33 @@ class Utils {
             timeInfo.tm_year = year - 1900;   // Years since 1900
             timeInfo.tm_mon = month - 1;      // Months range from 0 to 11
             timeInfo.tm_mday = day;
-            timeInfo.tm_hour = hour;
+            timeInfo.tm_hour = hour-1;
             timeInfo.tm_min = minute;
             timeInfo.tm_sec = second;
 
             return std::mktime(&timeInfo);
     }
 
+    /**
+     * Converte in una data in formato tm da una wxDateTime
+     * @param wxdt
+     */
+    static std::tm convertWxDateTimeToTm(const wxDateTime& wxDate){
+        std::tm result = {};
+        result.tm_year = wxDate.GetYear() - 1900;
+        result.tm_mon = wxDate.GetMonth();
+        result.tm_mday = wxDate.GetDay();
+        result.tm_hour = wxDate.GetHour();
+        result.tm_min = wxDate.GetMinute();
+        result.tm_sec = wxDate.GetSecond();
+        return result;
+    }
+
+    /**
+     * Restitusce una stringa che rappresenta un orario in formato HH:MM
+     * @param time
+     * @return
+     */
     static std::string formatTime(std::tm time){
         char buffer[6];
         std::strftime(buffer, sizeof(buffer), "%H:%M", &time);

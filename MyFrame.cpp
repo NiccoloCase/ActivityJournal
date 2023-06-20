@@ -103,7 +103,7 @@ MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size)
     auto scrollView = new MyScrollView(
             rightPanel,
             wxPoint(MARGIN_HORIZONTAL, currentPosY),
-            wxSize(rightPanel->GetSize().GetWidth()-MARGIN_HORIZONTAL*2,rightPanel->GetSize().GetHeight()-pos.y-50),
+            wxSize(rightPanel->GetSize().GetWidth()-MARGIN_HORIZONTAL*2,rightPanel->GetSize().GetHeight()-pos.y-130),
             &activityManager, &myForm
             );
 
@@ -130,7 +130,7 @@ void MyFrame::OnSubmitButtonClicked(wxCommandEvent &event) {
     std::cout << "description: " << myForm.getDescription() << std::endl;
     std::cout << "start time: " << myForm.getStartTime() << std::endl;
     std::cout << "end time: " << myForm.getEndTime() << std::endl;
-    std::cout << "date: " << myForm.getDate() << std::endl;
+    std::cout << "Day:" << myForm.getDate().tm_mday<< std::endl;
 
     // Valida il form
     if(!myForm.validateForm()) {
@@ -141,8 +141,10 @@ void MyFrame::OnSubmitButtonClicked(wxCommandEvent &event) {
     // Aggiunge la nuova attività
     std::time_t startTime = myForm.getStartTime();
     std::time_t endTime = myForm.getEndTime();
+    std::tm date = myForm.getDate();
 
-    activityManager.addActivity( new Activity(myForm.getDescription(), *std::localtime(&startTime), *std::localtime(&endTime)));
+
+    activityManager.addActivity( new Activity(myForm.getDescription(), *std::localtime(&startTime), *std::localtime(&endTime)),date);
 
     // Resetta il formli
     myForm.setDescription("");
@@ -176,7 +178,7 @@ void MyFrame::OnEndTimeSelected(wxDateEvent &event) {
 
 void MyFrame::OnDateSelected(wxDateEvent &event) {
     auto date = event.GetDate();
-    std::time_t timeT = Utils::convertWxDateTimeToTimeT(date);
+    std::tm timeT = Utils::convertWxDateTimeToTm(date);
     std::cout << date.GetDay() << "/" << date.GetMonth()<< "/" << date.GetYear()<< std::endl;
     myForm.setDate(timeT);
 }

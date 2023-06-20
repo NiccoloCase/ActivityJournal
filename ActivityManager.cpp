@@ -7,21 +7,18 @@
 #include "iostream"
 
 
- void ActivityManager::addActivity(Activity* activity) {
-    // data corrente
-    std::tm currentTime = Utils::getCurrentDate();
-
+ void ActivityManager::addActivity(Activity* activity, std::tm date) {
     // cerca se esiste già un giorno con la data odierna
     for (auto day : daysList){
-        if (Utils::isSameDay(day->getDate(), currentTime)){
+        if (Utils::isSameDay(day->getDate(), date)){
             std::cout << "Added activity to an existing day" << std::endl;
             day->addActivity(activity);
             return;
         }
      }
 
-     std::cout << "No existing day found, creating new one" << std::endl;
-     auto newDay = new Day(currentTime);
+     std::cout << "No existing day found, creating new one for day " << date.tm_mday << std::endl;
+     auto newDay = new Day(date);
      newDay->addActivity(activity);
      daysList.push_back(newDay);
      return;

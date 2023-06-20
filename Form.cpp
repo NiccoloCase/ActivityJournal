@@ -28,11 +28,11 @@ void Form::setEndTime(time_t endTime) {
     Form::endTime = endTime;
 }
 
-time_t Form::getDate() const {
+tm Form::getDate() const {
     return date;
 }
 
-void Form::setDate(time_t date) {
+void Form::setDate(tm date) {
     Form::date = date;
 }
 

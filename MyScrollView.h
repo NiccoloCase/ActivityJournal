@@ -38,20 +38,32 @@ public:
         sizer = new wxBoxSizer(wxVERTICAL);
 
         for (auto activity : shownActivities){
-           wxStaticText* text = new wxStaticText(this, wxID_ANY, wxString(activity->getDescription()));
-           text->SetBackgroundColour(wxColour("#02758c"));
-           auto textFont = text->GetFont();
+
+        //   sizer->Add(text, 0, wxALL, 10);
+
+            auto textPanel = new wxPanel(this, wxID_ANY);
+            textPanel->SetBackgroundColour("#02758c");
+
+
+
+            std::string timeString;
+            if(Utils::formatTime(activity->getStartTime()) == Utils::formatTime(activity->getEndTime()))
+                timeString = Utils::formatTime(activity->getStartTime());
+            else timeString = Utils::formatTime(activity->getStartTime()) + " - " + Utils::formatTime(activity->getEndTime());
+
+            auto timeText=  new wxStaticText(textPanel, wxID_ANY, wxString(timeString), wxPoint(0,0));
+            auto timeFont = timeText->GetFont();
+            timeFont.SetPointSize(10);
+            timeText->SetFont(timeFont);
+
+
+            wxStaticText* text = new wxStaticText(textPanel, wxID_ANY, wxString(activity->getDescription()),wxPoint(0,30));
+            auto textFont = text->GetFont();
             textFont.SetPointSize(15);
-           text->SetFont(textFont);
-
-           sizer->Add(text, 0, wxALL, 10);
+            text->SetFont(textFont);
 
 
-
-            wxStaticText* startTimeText = new wxStaticText(this, wxID_ANY, wxString(Utils::formatTime(activity->getStartTime())));
-
-
-            sizer->Add(startTimeText, 0, wxALL, 10);
+            sizer->Add(textPanel, 0, wxALL, wxBorder(6));
 
         }
 
@@ -65,11 +77,11 @@ public:
 */
         SetSizer(sizer);
         SetSize(size);
-        SetVirtualSize(size.GetWidth(),10000);
+        SetVirtualSize(size.GetWidth() ,10000);
 
 
         SetScrollRate(10, 10);
-        EnableScrolling(false, true);
+        EnableScrolling(true, true);
     }
 
 

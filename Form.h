@@ -9,6 +9,7 @@
 #include "Subject.h"
 #include "Observer.h"
 #include "list"
+#include "Utils.h"
 
 
 /**
@@ -20,10 +21,10 @@ class Form: Subject {
     public:
 
         Form(){
-            date = std::time(0);
+            date = Utils::getCurrentDate();
             searchDate = std::time(0);
             // initilalize varibailes to current time
-            startTime =Utils::getTodayTime();
+            startTime =std::time(0);
             endTime = std::time(0);
 
         }
@@ -37,8 +38,8 @@ class Form: Subject {
         time_t getEndTime() const;
         void setEndTime(time_t endTime);
 
-        time_t getDate() const;
-        void setDate(time_t date);
+        tm getDate() const;
+        void setDate(tm date);
 
         time_t getSearchDate() const;
         void setSearchDate(time_t date);
@@ -80,7 +81,7 @@ class Form: Subject {
         std::string description;
         std::time_t startTime;
         std::time_t endTime;
-        std::time_t date;
+        std::tm date;
         std::time_t searchDate;
         // pattern observer:
         std::list<Observer*> observers;
