@@ -80,6 +80,14 @@ class Utils {
         std::string timeString(buffer);
         return timeString;
         }
+
+
+
+        static std::tm  getTomorrowDate(std::tm date){
+            std::tm tomorrowDate = date;
+            tomorrowDate.tm_mday++;
+            return tomorrowDate;
+        }
 };
 
 

@@ -9,7 +9,7 @@
 
 class Activity {
     public:
-        Activity(std::string description, std::tm startTime, std::tm endTime) : description(description), startTime(startTime),endTime(endTime) {}
+        Activity(std::string description, std::tm startTime, std::tm endTime) : description(description), startTime(startTime), endTime(endTime) {}
 
 
     const std::string &getDescription() const {

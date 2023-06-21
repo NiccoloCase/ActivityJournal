@@ -67,14 +67,6 @@ public:
 
         }
 
-        // TODO: remove
-      /*  for (int i = 0; i < 200; i++) {
-             wxStaticText* text = new wxStaticText(this, wxID_ANY, wxString::Format("%d) Elemento", i+1));
-             text->SetBackgroundColour(wxColour("red"));
-             text->SetSize(wxSize(200, 100));
-             sizer->Add(text, 0, wxALL, 5);
-         }
-*/
         SetSizer(sizer);
         SetSize(size);
         SetVirtualSize(size.GetWidth() ,10000);
@@ -83,7 +75,6 @@ public:
         SetScrollRate(10, 10);
         EnableScrolling(true, true);
     }
-
 
 
     ~MyScrollView() {
