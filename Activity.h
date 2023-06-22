@@ -41,7 +41,6 @@ class Activity {
         std::tm startTime;
         std::tm endTime;
 
-
 };
 
 
