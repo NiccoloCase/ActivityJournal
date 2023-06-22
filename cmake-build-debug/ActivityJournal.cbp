@@ -543,6 +543,9 @@
 		<Unit filename="/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/test/ActivityManagerFixture.cpp">
 			<Option target="runTests"/>
 		</Unit>
+		<Unit filename="/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/test/UtilsTest.cpp">
+			<Option target="runTests"/>
+		</Unit>
 		<Unit filename="/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/test/lib/gtest/googlemock/src/gmock-all.cc">
 			<Option target="gmock"/>
 		</Unit>
