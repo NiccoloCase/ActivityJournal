@@ -207,12 +207,12 @@ test/CMakeFiles/runTests.dir/all: test/lib/gtest/googletest/CMakeFiles/gtest.dir
 test/CMakeFiles/runTests.dir/all: test/lib/gtest/googletest/CMakeFiles/gtest_main.dir/all
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/cmake-build-debug/CMakeFiles" --progress-num=15,16,17,18 "Built target runTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/cmake-build-debug/CMakeFiles" --progress-num=15,16,17,18,19 "Built target runTests"
 .PHONY : test/CMakeFiles/runTests.dir/all
 
 # Build rule for subdir invocation for target.
 test/CMakeFiles/runTests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/cmake-build-debug/CMakeFiles" 12
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/cmake-build-debug/CMakeFiles" 13
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/runTests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/niccolocaselli/Desktop/uni/Laboratorio di programmazione/activityJournal/cmake-build-debug/CMakeFiles" 0
 .PHONY : test/CMakeFiles/runTests.dir/rule
