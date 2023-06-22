@@ -45,7 +45,6 @@ void Form::setSearchDate(time_t date) {
     notifyObservers();
 }
 
-
 bool Form::validateForm() const {
     // Controlla se la descrizione è vuota
     if(description.empty()) return false;
