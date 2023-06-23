@@ -69,7 +69,6 @@ class Form: Subject {
         void removeObserver(Observer *observer) override {
             observers.remove(observer);
         }
-
         /**
          * Metodo che valida i dati del form
          * @return Restituisce se il form è valido
