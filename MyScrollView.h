@@ -106,7 +106,6 @@ private:
         std::cout << "Showing activities in: " << std::asctime(std::localtime(&date)) << std::endl;
         shownActivities = activityManager->getActivitiesByDate(*std::localtime(&date));
 
-        // TODO:remove
         for (auto activity : shownActivities){
             std::cout << "description: "<< activity->getDescription() << std::endl;
         }

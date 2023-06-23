@@ -48,8 +48,5 @@ void Form::setSearchDate(time_t date) {
 bool Form::validateForm() const {
     // Controlla se la descrizione è vuota
     if(description.empty()) return false;
-    // Controlla se la data di inizio è prima della data di fine
-    //if(startTime > endTime) return false; // TODO:remove controllo
-
     return true;
 }
