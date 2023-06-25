@@ -81,8 +81,11 @@ class Utils {
         return timeString;
         }
 
-
-
+        /**
+         * Passata una data, restituisce la data del giorno successivo
+         * @param date
+         * @return
+         */
         static std::tm  getTomorrowDate(std::tm date){
             std::tm tomorrowDate = date;
             tomorrowDate.tm_mday++;

@@ -119,8 +119,8 @@ void MyFrame::OnExit(wxCommandEvent& event) {
 }
 
 void MyFrame::OnAbout(wxCommandEvent& event) {
-    wxMessageBox( "This is a wxWidgets' Hello world sample",
-                  "About Hello World", wxOK | wxICON_INFORMATION );
+    wxMessageBox( "Registro di attività che memorizza cosa si è fatto durante una giornata. Classe che rappresenta attività con descrizione, tempo inizio e fine, Classe registro che colleziona attività su base del giorno.",
+                  "About", wxOK | wxICON_INFORMATION );
 }
 
 void MyFrame::OnSubmitButtonClicked(wxCommandEvent &event) {

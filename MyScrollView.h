@@ -21,14 +21,13 @@ public:
         // Registra l'observer
         subject->registerObserver(this);
 
-
-
-
         // GARFICA
         drawActivities();
     }
 
-
+    /**
+     * Disegna le attività del giorno selezionato
+     */
     void drawActivities() {
         if (sizer != nullptr){
             sizer->Clear(true);
@@ -38,13 +37,8 @@ public:
         sizer = new wxBoxSizer(wxVERTICAL);
 
         for (auto activity : shownActivities){
-
-        //   sizer->Add(text, 0, wxALL, 10);
-
             auto textPanel = new wxPanel(this, wxID_ANY);
             textPanel->SetBackgroundColour("#02758c");
-
-
 
             std::string timeString;
             if(Utils::formatTime(activity->getStartTime()) == Utils::formatTime(activity->getEndTime()))
@@ -61,7 +55,6 @@ public:
             auto textFont = text->GetFont();
             textFont.SetPointSize(15);
             text->SetFont(textFont);
-
 
             sizer->Add(textPanel, 0, wxALL, wxBorder(6));
 
@@ -97,7 +90,6 @@ private:
     wxBoxSizer* sizer;
     wxSize size;
     wxPoint pos;
-
 
     /**
      * Metodo che recupera le attività da mostrare del giorno sceleto
