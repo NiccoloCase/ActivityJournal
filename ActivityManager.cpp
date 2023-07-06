@@ -34,3 +34,9 @@ std::list<Activity*> ActivityManager::getActivitiesByDate(std::tm date) const {
     std::cout << "No activities found for the specified date" << std::endl;
     return  std::list<Activity*>();
 }
+
+ActivityManager::~ActivityManager() {
+    for (auto day : daysList){
+        delete day;
+    }
+}

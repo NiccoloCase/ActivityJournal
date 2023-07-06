@@ -27,7 +27,10 @@ class ActivityManager {
           * @param date
           */
          std::list<Activity*> getActivitiesByDate(std::tm date) const;
-    private:
+
+         ~ActivityManager();
+
+private:
          std::list<Day*> daysList;
 };
 
