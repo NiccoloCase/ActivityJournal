@@ -64,7 +64,6 @@ public:
         SetSize(size);
         SetVirtualSize(size.GetWidth() ,10000);
 
-
         SetScrollRate(10, 10);
         EnableScrolling(true, true);
     }
@@ -76,10 +75,11 @@ public:
 
     void update() override {
         std::cout << "Observer updated" << std::endl;
-
+        // Recupera la data del giorno di cui mostrare le attività
         auto date = subject->getSearchDate();
-
+        // Recupera le attività da mostrare
         fetchActivitiesToShow(date);
+        // Disegna le attività
         drawActivities();
     }
 
@@ -102,7 +102,6 @@ private:
             std::cout << "description: "<< activity->getDescription() << std::endl;
         }
     }
-
 };
 
 #endif //ACTIVITYJOURNAL_MYSCROLLVIEW_H

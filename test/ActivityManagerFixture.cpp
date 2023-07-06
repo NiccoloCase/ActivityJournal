@@ -21,7 +21,7 @@ TEST_F(ActivityManagerSuite, TestAddActivity) {
     ASSERT_EQ(1, activities.size());
 }
 
-// Testa la ricerca di attività per data
+// Test del metodo "getActivitiesByDate"
 TEST_F(ActivityManagerSuite, TestGetActivitiesByDate) {
     std::tm tomorrow = Utils::getTomorrowDate(now);
     activityManager.addActivity(new Activity("test1", now, now), now);

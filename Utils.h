@@ -86,7 +86,7 @@ class Utils {
          * @param date
          * @return
          */
-        static std::tm  getTomorrowDate(std::tm date){
+        static std::tm getTomorrowDate(std::tm date){
             std::tm tomorrowDate = date;
             tomorrowDate.tm_mday++;
             return tomorrowDate;

@@ -4,6 +4,7 @@
 
 #include "../Day.h"
 #include "gtest/gtest.h"
+#include "../Utils.h"
 
 TEST(DayTest, DayCostructor) {
     auto now = std::time(nullptr);
@@ -17,9 +18,18 @@ TEST(DayTest, DayCostructor) {
 TEST(DayTest, DayAddActivity) {
     auto now = std::time(nullptr);
     auto date = *std::localtime(&now);
+    // Crea una nuova giornata
     auto day = new Day(date);
-    day->addActivity(new Activity("Test activity", date, date));
-    auto activities = day->getActivities();
-    EXPECT_EQ(1, activities.size());
-    EXPECT_EQ("Test activity", activities.front()->getDescription());
+
+    // Aggiunge un'attività
+    day->addActivity(new Activity("Test activity 1", date, date));
+    EXPECT_EQ(1, day->getActivitiesSize());
+
+    // Aggiunge una seconda attività
+    day->addActivity(new Activity("Test activity 2", Utils::getTomorrowDate(date), date));
+    EXPECT_EQ(2, day->getActivitiesSize());
+
+    // Aggiunge una terza attività
+    day->addActivity(new Activity("Test activity 3", Utils::getTomorrowDate(date), date));
+    EXPECT_EQ(3, day->getActivitiesSize());
 }

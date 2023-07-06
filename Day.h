@@ -21,7 +21,7 @@ class Day {
          * Aggiunge un'attività alla giornata
          * @param activity
          */
-        void addActivity(Activity*activity) {
+        void addActivity(Activity* activity) {
             activities.push_back(activity);
         }
 
@@ -34,11 +34,25 @@ class Day {
         }
 
         /**
-         * Restituisce la lista di tutte le attività della giornata
+         * Restituisce la lista delle attività della giornata
          * @return
          */
-        std::list<Activity*> getActivities() const{
+        const std::list<Activity*> getActivities() const {
             return activities;
+        }
+
+        /**
+         * Restituisce il numero di attività della giornata
+         * @return
+         */
+        int getActivitiesSize() const{
+            return activities.size();
+        }
+
+        ~Day() {
+            for (auto activity : activities){
+                delete activity;
+            }
         }
 
     private:
