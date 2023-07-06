@@ -7,4 +7,4 @@ include_directories(${gtest_SOURCE_DIR}/include
 
 set(SOURCE_TEST_FILES runAllTests.cpp ActivityManagerFixture.cpp UtilsTest.cpp DayTest.cpp ActivityFixture.cpp)
 add_executable(runTests ${SOURCE_TEST_FILES})
-target_link_libraries(runTests gtest gtest_main core)
+target_link_libraries(runTests gtest gtest_main core ${wxWidgets_LIBRARIES})

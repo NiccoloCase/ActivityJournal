@@ -9,7 +9,7 @@ include(${wxWidgets_USE_FILE})
 # UNIT TESTING
 add_subdirectory(test)
 
-set(SOURCE_FILES MyScrollView.h MyFrame.cpp MyFrame.h ActivityManager.cpp ActivityManager.h Utils.h Day.h Activity.h Form.cpp Form.h Subject.h Observer.h)
+set(SOURCE_FILES MyScrollView.h MyFrame.cpp MyFrame.h ActivityManager.cpp ActivityManager.h Utils.h Utils.cpp Day.h Activity.h Form.cpp Form.h Subject.h Observer.h )
 add_executable(activityJournal MyApp.cpp MyApp.h)
 add_library(core ${SOURCE_FILES})
 target_link_libraries(activityJournal ${wxWidgets_LIBRARIES} core)
